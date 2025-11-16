@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hays County Population Growth</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel = "stylesheet" href = "https://js.arcgis.com/4.21/esri/themes/light/main.css"/>
+  <script src = "https://js.arcgis.com/4.21/"> </script>
 </head>
 <body>
-
+  <div id="header">
+      <h1>Hays County Population Growth from 2010-2020</h1>
+      <div id="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="resources.html">Resources</a>
+      </div>
+  </div>
+  <div id="sidebar">
+      <h3>Year Selection</h3>
+      <input type="range" id="yearSlider" min="0" max="2" step="1" value="0">
+      <p id="sliderLabel">2010-2020-Change</p>
+  </div>
+  <div id="main">
+    <div id="viewDiv"></div>
+  </div>
+  <div id="footer">
+    <p>Group 3 • Web Mapping • Fall 2025</p>
+    <script src="js/main.js"></script>
+</div>
 </body>
 </html>
