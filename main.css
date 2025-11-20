@@ -1,1 +1,66 @@
+style {
+  background-color: #d3d3d3;
+}
 
+h1 {
+background-color: #939799;
+color: #36454f;
+text-align: center;
+margin: 0;
+font-family: "Cambria", serif;
+border: 3px solid #808080;
+border-radius: 0px
+}
+#header {
+  background-color: #d3d3d3 max-width:1000px; margin: auto;
+  min-height: 100vh;
+  border-radius:0px; overflow: hidden;
+}
+
+h3 {
+  color:#36454f;
+  text-align: left;
+  margin: 0;
+  font-family: "Cambria", serif;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+
+div#nav {
+    color: #0000ff;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    font-family: "Cambria", serif;
+    position: absolute;
+    bottom: 0px;
+  }
+
+input#yearSlider {
+  color: #36454f;
+  text-align: left;
+  margin: auto;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
+
+p#sliderLabel {
+  color: #36454f;
+  font-family: "Cambria", serif;
+  font-weight: bold;
+  text-align: left;
+  margin: auto;
+  position: absolute;
+  top: 200px;
+  left: 50px;
+}
+
+div#footer {
+  color: #36454f;
+  font-family: "Cambria", serif;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
