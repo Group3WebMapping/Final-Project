@@ -27,7 +27,7 @@ require([
       fieldInfos: [
         { fieldName: "TRACTCE", label: "Census Tract" },
         { fieldName: "POP2020", label: "Population (2020)" },
-        { fieldName: "Median_Age2020", label: "Median Age (2020)" }
+        { fieldName: "Median_Age2020", label: "Median Age (2020)" },
         { fieldName: "PercentOccupiedHousing2020", label: "% Occupied Housing (2020)" },
         { fieldName: "Median_Household_Income2020", label: "Median Household Income (2020)" },
       ]
