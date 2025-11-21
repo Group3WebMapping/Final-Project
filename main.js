@@ -17,7 +17,7 @@ require([
 
   const popLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/PopulationChange20102020Fixed/FeatureServer/0",
-    outFields: ["TRACTCE", "POP2010","POP2020" "POPCHANGE"],
+    outFields: ["TRACTCE", "POP2010","POP2020", "POPCHANGE"],
 
   popupTemplate: {
     title: "Census Tract {TRACTCE}",
