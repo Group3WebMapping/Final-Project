@@ -14,7 +14,7 @@ require([
     container: "viewDiv",
     map: map,
     center: [-98.0, 30.0],   // Hays County area
-    zoom: 11
+    zoom: 10
   });
 
   // Add the hosted feature layer
