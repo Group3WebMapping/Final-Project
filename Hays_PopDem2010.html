@@ -23,23 +23,29 @@
     </div>
     <div id="main">
       <div id="viewDiv"></div>
+
       <div id="queryForm">
-      <h2>Query Demographics Data</h2>
-      <form id="queryFormElement">
-        <label for="population">Minimum Population:</label>
-        <input type="number" id="population" name="population" min="0" step="1000">
-        <br>
+        <h2>Query Demographics Data</h2>
+        <form id="queryFormElement">
+          <label for="population">Minimum Population:</label>
+          <input type="number" id="population" name="population" min="0" step="1000">
+          <br>
 
-        <label for="income">Minimum Median Income:</label>
-        <input type="number" id="income" name="income" min="0" step="1000">
-        <br>
+          <label for="income">Minimum Median Income:</label>
+          <input type="number" id="income" name="income" min="0" step="1000">
+          <br>
 
-        <label for="medianAge">Maximum Median Age:</label>
-        <input type="number" id="medianAge" name="medianAge" min="0" step="1">
-        <br>
+          <label for="medianAge">Maximum Median Age:</label>
+          <input type="number" id="medianAge" name="medianAge" min="0" step="1">
+          <br>
 
-        <button type="submit">Apply Query</button>
-      </form>
+          <label for="occupiedHousing">Minimum % Occupied Housing:</label>
+          <input type="number" id="occupiedHousing" name="occupiedHousing" min="0" step="0.1" max="100">
+          <br>
+
+          <button type="submit">Apply Query</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
