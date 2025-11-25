@@ -91,9 +91,9 @@ require([
             geometry: feature.geometry,
             symbol: {
               type: "simple-fill",
-              color: [0, 0, 255, 0.3],  // Blue with some transparency
+              color: [128, 128, 128, 0.5],
               outline: {
-                color: [0, 0, 255],
+                color: [105, 105, 105],
                 width: 2
               }
             },

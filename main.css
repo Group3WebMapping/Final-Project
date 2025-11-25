@@ -97,12 +97,12 @@ div#footer {
 
 #queryForm button {
   padding: 8px;
-  background-color: #0078D4; /* Add some color to the button */
+  background-color: #808080; /* Add some color to the button */
   color: white;
   border: none;
   cursor: pointer;
 }
 
 #queryForm button:hover {
-  background-color: #005B8C; /* Change button color on hover */
+  background-color: #6e6e6e; /* Change button color on hover */
 }
