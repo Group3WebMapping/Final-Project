@@ -4,7 +4,7 @@ require([
   "esri/layers/FeatureLayer",
   "esri/tasks/support/Query",
   "esri/Graphic"
-], function (Map, MapView, FeatureLayer) {
+], function (Map, MapView, FeatureLayer, Query, Graphic) {
 
   const map = new Map({
     basemap: "streets-navigation-vector"
