@@ -40,54 +40,75 @@ require([
 
     queryForm.addEventListener("submit", function (event) {
       event.preventDefault();
+
+      // Get the input values
       const populationInput = document.getElementById("population").value;
+      const incomeInput = document.getElementById("income").value;
+      const medianAgeInput = document.getElementById("medianAge").value;
 
-      // Check if the input is valid
-      if (populationInput && !isNaN(populationInput)) {
-        const minPopulation = parseInt(populationInput, 10);
+      // Initialize the where clause
+      let whereClause = "1=1";  // Always true, to start with no filtering
 
-        // Create a new query
-        const query = new Query();
-        query.where = `POP2010 >= ${minPopulation}`; // Filtering by population
-        query.outFields = ["GEOID10", "POP2010", "Median_Age_2010", "F__Occupied_Housing", "Median_Income"];
-        query.returnGeometry = true;
-
-        // Execute the query
-        layerA.queryFeatures(query).then(function (results) {
-          // Clear any previous graphics
-          view.graphics.removeAll();
-
-          // Add the results as graphics
-          const features = results.features;
-          features.forEach(function (feature) {
-            const graphic = feature.clone();
-            view.graphics.add(graphic);
-
-            // Optionally, show results in a pop-up
-            feature.popupTemplate = {
-              title: "2010 Demographics – Tract {GEOID10}",
-              content: [{
-                type: "fields",
-                fieldInfos: [
-                  { fieldName: "GEOID10", label: "Census Tract" },
-                  { fieldName: "POP2010", label: "Population (2010)" },
-                  { fieldName: "Median_Age_2010", label: "Median Age (2010)" },
-                  { fieldName: "F__Occupied_Housing", label: "% Occupied Housing (2010)" },
-                  { fieldName: "Median_Income", label: "Median Household Income (2010)" },
-                ],
-              }]
-            };
-          });
-
-          // If no results, alert the user
-          if (features.length === 0) {
-            alert("No records found for the given criteria.");
-          }
-        }).catch(function (error) {
-          console.error("Query failed: ", error);
-        });
-      } else {
-        alert("Please enter a valid population number.");
+      // Dynamically build the where clause based on input values
+      if (populationInput) {
+        whereClause += ` AND POP2010 >= ${populationInput}`;
       }
+      if (incomeInput) {
+        whereClause += ` AND Median_Income >= ${incomeInput}`;
+      }
+      if (medianAgeInput) {
+        whereClause += ` AND Median_Age_2010 <= ${medianAgeInput}`;
+      }
+
+      // Create a new query
+      const query = new Query();
+      query.where = whereClause;  // Set the dynamic where clause
+      query.outFields = ["GEOID10", "POP2010", "Median_Age_2010", "F__Occupied_Housing", "Median_Income"];
+      query.returnGeometry = true;
+
+      // Execute the query
+      layerA.queryFeatures(query).then(function (results) {
+        // Clear any previous graphics
+        view.graphics.removeAll();
+
+        // Check if there are any results
+        const features = results.features;
+        if (features.length === 0) {
+          alert("No records found for the given criteria.");
+        } else {
+          // Add the results as graphics to the map
+          features.forEach(function (feature) {
+            const graphic = new Graphic({
+              geometry: feature.geometry,
+              symbol: {
+                type: "simple-fill",
+                color: [0, 0, 255, 0.3],  // Blue with some transparency
+                outline: {
+                  color: [0, 0, 255],
+                  width: 2
+                }
+              },
+              attributes: feature.attributes,
+              popupTemplate: {
+                title: "2010 Demographics – Tract {GEOID10}",
+                content: [{
+                  type: "fields",
+                  fieldInfos: [
+                    { fieldName: "GEOID10", label: "Census Tract" },
+                    { fieldName: "POP2010", label: "Population (2010)" },
+                    { fieldName: "Median_Age_2010", label: "Median Age (2010)" },
+                    { fieldName: "F__Occupied_Housing", label: "% Occupied Housing (2010)" },
+                    { fieldName: "Median_Income", label: "Median Household Income (2010)" },
+                  ],
+                }]
+              }
+            });
+
+            view.graphics.add(graphic);
+          });
+        }
+      }).catch(function (error) {
+        console.error("Query failed: ", error);
+      });
     });
   });
