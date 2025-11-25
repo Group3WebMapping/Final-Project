@@ -1,7 +1,7 @@
 require([
   "esri/Map",
   "esri/views/MapView",
-  "esri/layers/FeatureLayer"
+  "esri/layers/FeatureLayer",
   "esri/tasks/support/Query",
   "esri/Graphic"
 ], function (Map, MapView, FeatureLayer) {
