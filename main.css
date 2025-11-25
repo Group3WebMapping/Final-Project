@@ -74,3 +74,35 @@ div#footer {
   width: 100%;
   border: 2px solid black;
 }
+#queryForm {
+  position: absolute;
+  top: 20px;          /* Distance from the top of the map */
+  right: 20px;        /* Distance from the right edge of the map */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;      /* Ensure it's on top of other map elements */
+}
+
+#queryFormElement {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;           /* Add space between form inputs */
+}
+
+#queryForm input {
+  width: 150px;        /* Set width of input fields */
+}
+
+#queryForm button {
+  padding: 8px;
+  background-color: #0078D4; /* Add some color to the button */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#queryForm button:hover {
+  background-color: #005B8C; /* Change button color on hover */
+}
