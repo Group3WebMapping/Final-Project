@@ -1,9 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <title>About Page!</title>
+  <style>
+   body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #a9a9a9;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .wrapper {
+      width: 90%;
+      max-width: 900px;
+      height: 95vh;
+      border: 6px solid gold;
+      border-radius: 12px;
+      background: #501214;
+      padding: 40px;
+      padding-top: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .bobcat-logo {
+      width: 100px;
+      position: absolute;
+
+    }
+    .top-right{
+      top: 0px;
+      right: 0px;
+    }
+
+
+    .top-left {
+      top: 0px;
+      left: 0px;
+    }
+
+    .bottom-right {
+      bottom: 0px;
+      right: 0px;
+    }
+
+    .bottom-left {
+      bottom: 0px;
+      left: 0px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      text-align: center;
+      color: #f5f5f5;
+      margin-top: 20px;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 22px;
+      color: #FFD700;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    .links {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .link-box {
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: underline;
+      font-size: 32px;
+      color: #f5f5f5;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
+  <div class="wrapper">
+
+    <img class="bobcat-logo top-right"src="https://sportslogohistory.com/wp-content/uploads/2019/03/texas_state_bobcats_2008-pres%5Ea.png" alt="Top Right Logo">
+    <img class="bobcat-logo top-left"src="https://sportslogohistory.com/wp-content/uploads/2019/03/texas_state_bobcats_2008-pres%5Ea.png" alt="Top Left Logo">
+    <img class="bobcat-logo bottom-right"src="https://sportslogohistory.com/wp-content/uploads/2019/03/texas_state_bobcats_2008-pres%5Ea.png" alt="Bottom Right Logo">
+    <img class="bobcat-logo bottom-left"src="https://sportslogohistory.com/wp-content/uploads/2019/03/texas_state_bobcats_2008-pres%5Ea.png" alt="Bottom Left Logo">
+
+   <h1>About Us</h1>
+   <p class="description">Here are the Personal Pages for our group members.</p>
+
+   <div class="links">
+     <div class="link-box">
+       <a href="https://mseaborn2020.github.io/michael.github.io/" target="_blank">
+         Michael's Personal Page
+       </a>
+     </div>
+
+     <div class="link-box">
+       <a href="https://pef36.github.io/pef36.github.io/" target="_blank">
+         Ashlyn's Personal Page
+       </a>
+     </div>
+
+     <div class="link-box">
+       <a href="https://ir6621.github.io/kcr108.github.io/" target="_blank">
+         Ishraq's Personal Page
+       </a>
+     </div>
+
+     <div class="link-box">
+       <a href="https://campbelltxstate.github.io/CampbellTxState/" target="_blank">
+         Campbell's Personal Page
+       </a>
+     </div>
+   </div>
 
 </body>
 </html>
