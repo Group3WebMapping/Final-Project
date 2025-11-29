@@ -1,33 +1,10 @@
 
 require([
-  "esri/renderers/HeatmapRenderer",
   "esri/Map",
   "esri/views/MapView",
   "esri/layers/FeatureLayer",
-<<<<<<< HEAD
-], function(HeatmapRenderer, Map, MapView, FeatureLayer) {
-
-  const heatmapRenderer = {
-  type: "heatmap", // autocasts as new HeatmapRenderer()
-  // The attribute field used to determine the weight of each point (optional)
-  field: "crime_count",
-  colorStops: [
-    { ratio: 0, color: "rgba(255, 255, 255, 0)" }, // Transparent at the lowest density
-    { ratio: 0.2, color: "rgba(255, 255, 255, 1)" },
-    { ratio: 0.5, color: "rgba(255, 140, 0, 1)" }, // Orange in the middle
-    { ratio: 0.8, color: "rgba(255, 140, 0, 1)" },
-    { ratio: 1, color: "rgba(255, 0, 0, 1)" } // Red at the highest density
-  ],
-  minDensity: 500,
-  maxDensity: 1000,
-  radius: 10, // in points
-  // Optional: keeps the heatmap consistent across all scales
-  // referenceScale: 13000
-};
-=======
   "esri/renderers/HeatmapRenderer"
 ], function(Map, MapView, FeatureLayer, HeatmapRenderer) {
->>>>>>> 3c10bb007132deec4ec3a5244e4e92bdf4cd7731
 
   const map = new Map({
     basemap: "streets-navigation-vector"
