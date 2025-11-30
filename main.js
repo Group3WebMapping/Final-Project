@@ -17,6 +17,7 @@ require([
   });
 
     const heatmapLayer = new FeatureLayer({
+    visible: false,
     url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/PopChange_WPoints/FeatureServer/0",
     renderer: {
       type: "heatmap",
@@ -52,4 +53,12 @@ require([
   });
 
   map.addMany([popLayer, heatmapLayer]);
+
+  var toggleButton = document.getElementById("toggleHeat");
+
+  toggleButton.onclick = function () {
+      if (heatmapLayer.visible === true) {heatmapLayer.visible = false; } else {heatmapLayer.visible = true;
+      }
+  };
+
 });
