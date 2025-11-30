@@ -5,18 +5,18 @@ require([
   "esri/layers/FeatureLayer",
   "esri/renderers/HeatmapRenderer"
 ], function(Map, MapView, FeatureLayer, HeatmapRenderer) {
-
+// Create the Map
   const map = new Map({
     basemap: "streets-navigation-vector"
   });
-
+// Create the MapView
   const view = new MapView({
     container: "viewDiv",
     map: map,
     center: [-98.0, 30.0],
     zoom: 10
   });
-
+  // Add a Heatmap Feature Layer
     const heatmapLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/PopChange_WPoints/FeatureServer/0",
     renderer: {
@@ -33,11 +33,11 @@ require([
     },
     opacity: 0.4
   });
-
+// Add a Population Feature Layer with Popups
   const popLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/PopulationChange20102020Fixed/FeatureServer/0",
     outFields: ["TRACTCE", "POP2010","POP2020", "POPCHANGE"],
-
+// Add Layers to the Map
   popupTemplate: {
     title: "Census Tract {TRACTCE}",
     content: [{
