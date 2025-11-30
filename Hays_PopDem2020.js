@@ -5,18 +5,19 @@ require([
   "esri/tasks/support/Query",
   "esri/Graphic"
 ], function (Map, MapView, FeatureLayer, Query, Graphic) {
-
+// Create the map with a streets-navigation-vector basemap
   const map = new Map({
     basemap: "streets-navigation-vector"
   });
-
+  // Create the view for the map, setting initial center and zoom
   const view = new MapView({
     container: "viewDiv",
     map: map,
     center: [-98.0, 30.0],
     zoom: 10
   });
-
+  // Add a demographic feature layer for 2020 Census data
+    // Includes opacity, outFields for popups, and a popup template
   const layerA = new FeatureLayer({
     url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/Demographics2020WebMapping_Updated1_ExportFeatures/FeatureServer/0",
     opacity: 0.65,
@@ -36,11 +37,11 @@ require([
       }]
     }
   });
-
+  // Add the feature layer to the map
   map.add(layerA);
-
+  // Get the HTML form element for dynamic queries
   const queryForm = document.getElementById("queryFormElement");
-
+    // Listen for form submission to perform a query
   queryForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
