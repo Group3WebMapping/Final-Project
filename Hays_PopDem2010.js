@@ -18,7 +18,7 @@ require([
   });
 
   const layerA = new FeatureLayer({
-    url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/Demographics2010WebMapping_Updated/FeatureServer/0",
+    url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/Demographics2010WebMapping_Updated2_ExportFeatures/FeatureServer/0",
     opacity: 0.65,
     outFields: ["GEOID10", "POP2010", "Median_Age_2010", "F__Occupied_Housing", "Median_Income"],
 
