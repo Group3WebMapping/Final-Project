@@ -18,7 +18,7 @@ require([
   });
 
   const layerA = new FeatureLayer({
-    url: "https://services1.arcgis.com/M68M8H7oABBFs1Pf/arcgis/rest/services/Demographics2020WebMapping_Updated/FeatureServer/0",
+    url:  url: "https://services1.arcgis.com/.../FeatureServer/0?" + Date.now(),
     opacity: 0.65,
     outFields: ["TRACTCE", "POP2020", "Median_Age2020", "PercentOccupiedHousing2020", "Median_Household_Income2020"],
 
