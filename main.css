@@ -1,25 +1,26 @@
 body {
-  background-color: #d3d3d3;
-}
+  background-color: #d3d3d3;  /* Sets the overall page background color */
+  }
 
-h1 {
-background-color: #939799;
-color: #36454f;
-text-align: center;
-margin: 0;
-font-family: "Cambria", serif;
-border: 3px solid #808080;
-border-radius: 0px
-}
-#header {
-  background-color: #d3d3d3;
-  width:100%;
-  margin: auto;
-  min-height: 80px;
-  border-radius:0px; overflow: hidden;
-}
+  h1 { /* Styles the main page title: background, font, borders, alignment */
+  background-color: #939799;
+  color: Black;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-family: "Cambria", serif;
+  border: 3px solid #808080;
+  border-radius: 0px
+  }
+  #header { /* Header container that holds the title and nav bar */
+    background-color: #d3d3d3;
+    width:100%;
+    margin: auto;
+    min-height: 80px;
+    border-radius:0px; overflow: hidden;
+  }
 
-h3 {
+h3 { /* Subheading style used for labels/titles inside the map area */
   color:#36454f;
   text-align: left;
   margin: 0;
@@ -29,7 +30,8 @@ h3 {
   left: 50px;
 }
 
-div#nav {
+div#nav { /* Navigation bar container: centers the buttons and controls spacing */
+    display: inline-block;
     color: #0000ff;
     text-align: center;
     margin: auto;
@@ -37,57 +39,62 @@ div#nav {
     font-family: "Cambria", serif;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 15px;
   }
 
-input#yearSlider {
-  color: #36454f;
-  text-align: left;
-  margin: auto;
-  position: absolute;
-  top: 150px;
-  left: 50px;
+  #nav a { /* Styles the navigation buttons.*/
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 0 8px;
+    background-color: Black;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
 }
 
-p#sliderLabel {
-  color: #36454f;
-  font-family: "Cambria", serif;
-  font-weight: bold;
-  text-align: left;
-  margin: auto;
-  position: absolute;
-  top: 200px;
-  left: 50px;
+#toggleHeat {  /* Styles the heatmap button */
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-family: "Cambria", serif;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
 }
 
-div#footer {
-  color: #36454f;
+div#footer { /* Styles the heatmap button */
+  color: Black;
   font-family: "Cambria", serif;
   font-weight: bold;
   text-align: center;
   margin: auto;
 }
 #main {
-  height: 1200px;
+  height: 85vh; /*adjusts height based on screen size*/
 }
 #viewDiv {
-  height: 100%;
-  width: 100%;
-  border: 2px solid black;
+  height: 100%; /* Makes the map fully fill the #main container */
+  width: 100%; /* Keeps the map at full width */
+  border: 2px solid black; /* Border to help distingush between background*/
+  border-radius: 8px;
 }
 #queryForm {
   position: absolute;
-  top: 100px;          /* Distance from the top of the map */
+  top: 130px;          /* Distance from the top of the map */
   right: 20px;        /* Distance from the right edge of the map */
+  width: 260px;
   background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;      /* Ensure it's on top of other map elements */
+  z-index: 1000;      /* Makes sure its on top of other map elements */
 }
 
 #queryFormElement {
-  display: flex;
-  flex-direction: column;
+  display: flex;        /* Makes inputs stack*/
+  flex-direction: column;  /* Makes them stack vertically */
   gap: 10px;           /* Add space between form inputs */
 }
 
@@ -100,6 +107,7 @@ div#footer {
   background-color: #808080; /* Add some color to the button */
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 

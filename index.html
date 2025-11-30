@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hays County Population Growth</title>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.21/"></script>
+  <title>Hays County Population Growth</title> <!-- Title of our webmap -->
+  <link rel="stylesheet" href="main.css"> <!-- Link to external CSS -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css"> <!-- ArcGIS Javascript API CSS-->
+  <script src="https://js.arcgis.com/4.21/"></script> <!-- ArcGIS Javascript API Link -->
 </head>
 <body>
-  <div style= "background-color: lightgray;"></div>
-  <div id="header">
-      <h1>Hays County Population Growth from 2010-2020</h1>
-      <div id="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="resources.html">Resources</a>
-          <a href="Hays_PopDem2010.html">Hays County Population & Demographics(2010)</a>
-          <a href="Hays_PopDem2020.html">Hays County Population & Demographics(2020)</a>
+  <div style= "background-color: lightgray;"></div> <!-- Light gray background color helps contrast -->
+  <div id="header"> <!-- Header Div contains top elements-->
+      <h1>Hays County Population Growth from 2010-2020</h1> <!-- The overall title of our webmap -->
+      <div id="nav"> <!-- The nav Div stores our buttons/links -->
+          <a href="index.html">Home</a> <!-- Home Page Link -->
+          <a href="about.html">About</a> <!-- Link to About us pages -->
+          <a href="resources.html">Resources</a> <!-- Link to Resources -->
+          <a href="Hays_PopDem2010.html">Hays County Population & Demographics(2010)</a> <!-- Link to 2010 Demographic and Population map -->
+          <a href="Hays_PopDem2020.html">Hays County Population & Demographics(2020)</a> <!-- Link to 2020 Demographic and Population map -->
+          <button id="toggleHeat" class="heatToggleBtn">Toggle Heatmap</button>  <!-- Adds heatmap button to same header as other buttons -->
       </div>
   </div>
-  <div id="main">
+  <div id="main"> <!-- Our main map div-->
     <div id="viewDiv"></div>
   </div>
-  <div id="footer">
+  <div id="footer"> <!-- Bottom footer with current info-->
     <p>Group 3 • Web Mapping • Fall 2025</p>
 </div>
-<script src="main.js"></script>
+<script src="main.js"></script> <!-- Linking the external javascript file -->
 </body>
 </html>
