@@ -5,6 +5,7 @@ require([
   "esri/grometry/Point",
 ], function(HeatmapRenderer, Map, MapView, Point) {
 
+    // Create a heatmap renderer to visualize point densities
   const heatmapRenderer = new Heatmap {
   type: "heatmap", // autocasts as new HeatmapRenderer()
   // The attribute field used to determine the weight of each point (optional)
@@ -19,15 +20,15 @@ require([
   minDensity: 500,
   maxDensity: 1000,
   radius: 10, // in points
-  // Optional: keeps the heatmap consistent across all scales
+  // keeps the heatmap consistent across all scales
   // referenceScale: 13000
 };
 
-
+  // Create the map
   const map = new Map({
     basemap: "streets-navigation-vector"
   });
-
+ // Create the MapView
   const view = new MapView({
     container: "viewDiv",
     map: map,
