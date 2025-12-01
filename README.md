@@ -7,3 +7,4 @@ The application includes a main page with a heatmap renderer for visualizing pop
 The web map is built using HTML for structure, CSS for styling, and JavaScript leveraging the ArcGIS API for dynamic map functionality. Feature layers are hosted on ArcGIS Online and include relevant census data attributes. The workflow involved data collection, feature layer creation and hosting, HTML/CSS/JavaScript page development, and iterative testing.
 
 The project contributes by transforming raw census data into interactive, spatially understandable visualizations, facilitating user exploration and analysis. Limitations include lack of mobile optimization and reliance on hosted layers. Future enhancements could include user-uploaded data support, improved symbology, geocoding integration, and the addition of new layers and metadata to expand analytical capabilities.
+![Website Homepage](images/Screenshot 2025-11-30 181936.png)
