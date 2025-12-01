@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Population & Demographics (2010)</title>
-
+<!-- Link to custom CSS -->
     <link rel="stylesheet" href="main.css">
-
+   <!-- ArcGIS API CSS and JS -->
     <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css">
     <script src="https://js.arcgis.com/4.21/"></script>
-
+ <!-- Link to custom JavaScript for the map and query functionality -->
     <script src="Hays_PopDem2010.js" defer></script>
   </head>
 
   <body>
+    <!-- Page title -->
     <h1>Population and Demographics of Hays County (2010)</h1>
+     <!-- Navigation menu -->
     <div id="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="resources.html">Resources</a>
         <a href="Hays_PopDem2020.html">Hays County Population & Demographics(2020)</a>
     </div>
+      <!-- Main content area -->
     <div id="main">
+      <!-- Map container where the ArcGIS MapView will render -->
       <div id="viewDiv"></div>
-
+  <!-- Form for querying 2010 demographic data -->
       <div id="queryForm">
         <h2>Query Demographic Data</h2>
         <form id="queryFormElement">
