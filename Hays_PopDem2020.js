@@ -81,7 +81,7 @@ require([
       // Clear any previous graphics
       view.graphics.removeAll();
 
-      // Check if there are any resultss
+      // check if there are any results
       const features = results.features;
       if (features.length === 0) {
         alert("No records found for the given criteria.");
