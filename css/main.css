@@ -71,8 +71,12 @@ div#footer { /* Styles the heatmap button */
   text-align: center;
   margin: auto;
 }
+#footer img { /* Makes Legends a normal size */
+    width: 60%;
+    height: auto;
+}
 #main {
-  height: 85vh; /*adjusts height based on screen size*/
+  height: 70vh; /*adjusts height based on screen size*/
 }
 #viewDiv {
   height: 100%; /* Makes the map fully fill the #main container */
